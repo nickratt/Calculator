@@ -1,0 +1,56 @@
+#include <iostream>
+#include <cstdlib>
+#include "headers.h"
+
+using namespace std;
+
+void Options() //display the options
+{
+  cout << "Welcome to the online calculator!" << endl;
+  cout << "Choose a selection" << endl;
+
+  cout << "Option 1: addition" << endl;
+  cout << "Option 2: subtraction" << endl;
+  cout << "Option 3: multiplication" << endl;
+  cout << "Option 4: division" << endl;
+
+  cout << "input an option: " << flush;
+}
+
+
+
+int main()
+{
+  int ans;
+  int num, num2;
+  Options();
+  cin >> ans;
+
+  cout << "enter a number for the calculation: " <<flush;
+  cin >> num;
+  cout << "enter another number for the calculation: " <<flush;
+  cin >>num2;
+
+switch(ans)
+{
+  case 1:
+  cout << addition(num,num2);
+  break;
+  case 2:
+  cout << subtraction(num,num2);
+  break;
+  case 3:
+  cout << multiplication(num,num2);
+  break;
+  case 4:
+  cout << division(num,num2);
+  break;
+  default:
+  cout << "Not a valid option!" << endl;
+  break;
+}
+
+
+
+
+}
